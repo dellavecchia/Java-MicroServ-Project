@@ -1,0 +1,4 @@
+{"rule":"EN_COMPOUNDS","sentence":"^\\QProduct-Micro-services-Project\nThis is a project of a simple micro-services system, with 2 services (Products and Warehouse), CRUD and business rules.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QEndpoints\nBaseURL: /products\nPOST: create()\nGET: getAll()\nGET /{id}: getById()\nPUT /{id}: update()\nDELETE /{id}: delete()\\E$"}
+{"rule":"IT_IS","sentence":"^\\QBusiness Rules\nIt's only possible to create products with a positive value of price;\nIt's not possible to search products that aren't available;\nIt's not possible to insert descriptions with less than 50 characters.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QEndpoints\nBaseURL: /warehouses\nPOST: create()\nGET: getAll()\nGET /{id}: getById()\nPUT /{id}: update()\\E$"}
