@@ -1,8 +1,8 @@
 # Product-Micro-services-Project
-*This is a project of a simple micro-services system, with 2 services (Products and Warehouse), CRUD and business rules.*
+*This is a project of a simple microservices system, with 2 services (Product-ms and Warehouse-ms), CRUD and business rules.*
 
 
-# Products-ms
+# Product-ms
 
 ## Endpoints
 - BaseURL: /products
@@ -28,7 +28,7 @@
 - It's not possible to search products that aren't available;
 - It's not possible to insert descriptions with less than 50 characters.
 
-# Warehouses-ms
+# Warehouse-ms
 
 ## Endpoints
 - BaseURL: /warehouses
