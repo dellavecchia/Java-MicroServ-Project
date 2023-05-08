@@ -1,8 +1,9 @@
 package br.com.dellavecchia.productms.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
-import org.apache.catalina.connector.Response;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -26,6 +27,34 @@ public class ProductServiceImpl implements ProductService {
 
             return Optional.of(response);
        
-    }   
+    }
+
+    @Override
+    public List<ProductDTO> getAll() {
+        ModelMapper mapper = new ModelMapper();
+        List<Product> products = repository.findAll();
+        List<ProductDTO> responses = new ArrayList<>();
+        
+
+    // for (Product product : products) {
+    //     ProductDTO response = mapper.map(product, ProductDTO.class);
+    //     responses.add(response);
+
+    // }
+    
+    products.forEach(product -> {ProductDTO response = mapper.map(product, ProductDTO.class);
+        responses.add(response);
+    });
+
+
+
+
+    return responses;
+        
+
+        
+
+    }
 
 }
+

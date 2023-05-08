@@ -24,9 +24,9 @@
 ```
 
 ## Business Rules
-- It's only possible to create products with a positive value of price;
+- It is only possible to create products with a positive value of price; 
 - It's not possible to search products that aren't available;
-- It's not possible to insert descriptions with less than 50 characters.
+- It's not possible to insert descriptions with less than 50 characters. (@Size)
 
 # Warehouse-ms
 
