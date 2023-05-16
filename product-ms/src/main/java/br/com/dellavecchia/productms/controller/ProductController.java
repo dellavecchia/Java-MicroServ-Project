@@ -26,7 +26,8 @@ public class ProductController {
 //        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
         //JAVA 8/11 STYLE
-        return response.map(productDTO -> new ResponseEntity<>(response.get(), HttpStatus.CREATED)).orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
+        return response.map(productDTO -> new ResponseEntity<>(response.get(), HttpStatus.CREATED))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
     }
 
     @GetMapping
@@ -52,10 +53,7 @@ public class ProductController {
                                              @RequestBody @Valid ProductDTO request) {
         Optional<ProductDTO> response = service.update(id, request);
 
-        if (response.isPresent()) {
-            return ResponseEntity.ok(response.get());
-        }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return response.map(ResponseEntity::ok).orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
     }
 
     @DeleteMapping("/{id}")
