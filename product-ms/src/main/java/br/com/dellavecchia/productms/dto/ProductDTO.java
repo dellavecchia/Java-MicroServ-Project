@@ -14,7 +14,7 @@ public class ProductDTO {
     @Size(min = 50)
     private String description;
 
-    @Positive //Foces you to have a value different from zero Ex: $ 0,01
+    @Positive //Forces you to have a value different from zero Ex: $ 0,01
     private double price;
     
     private boolean available;
