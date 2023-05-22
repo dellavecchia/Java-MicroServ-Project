@@ -43,10 +43,14 @@
 {
     "id": 1,
     "productid": 1,
-    "quantity": 10,
+    "quantity": 10
 }
 ```
 ## Business Rules
 - The warehouse is responsible for notifying if a product is available or not. So, if the quantity = 0, the warehouse should notify the "product-ms" service;
 - Isn't allowed more than one line of the same product on the database.
+- The communication between the services might be done via Message Brokers such as RabbitMQ or Kafka, still to be defined.
 
+## UPDATE 1.0.1 - 22/05/2023
+- Swagger 3 added to the project. Basic documentation of endpoints.
+- PostgreSQL configured in the 'application.properties' file. The database is hosted on a docker container orchestrated via k8s minikube (kubegres).

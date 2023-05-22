@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-MicroServ-Project.iml" filepath="$PROJECT_DIR$/.idea/Java-MicroServ-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/br.com.dellavecchia.product-ms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/br.com.dellavecchia.product-ms.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/product-ms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/product-ms.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/warehouse-ms.main.iml" filepath="$PROJECT_DIR$/.idea/modules/warehouse-ms.main.iml" />
     </modules>
   </component>
 </project>
