@@ -54,3 +54,5 @@
 ## UPDATE 1.0.1 - 22/05/2023
 - Swagger 3 added to the project. Basic documentation of endpoints.
 - PostgreSQL configured in the 'application.properties' file. The database is hosted on a docker container orchestrated via k8s minikube (kubegres).
+## UPDATE 1.0.2 - 31/05/23
+- Exception Handler was implemented for the FindById end-point. If the id inst found, message appears.
