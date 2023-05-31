@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import br.com.dellavecchia.productms.exception.ProductNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -42,12 +43,6 @@ public class ProductServiceImpl implements ProductService {
         List<ProductDTO> responses = new ArrayList<>();
 
 
-        // for (Product product : products) {
-        //     ProductDTO response = mapper.map(product, ProductDTO.class);
-        //     responses.add(response);
-
-        // }
-
         products.forEach(product -> {
             ProductDTO response = mapper.map(product, ProductDTO.class);
             responses.add(response);
@@ -65,8 +60,9 @@ public class ProductServiceImpl implements ProductService {
         if (product.isPresent()) {
             return Optional.of(mapper.map(product.get(), ProductDTO.class));
         }
-        return Optional.empty();
-
+        else {
+            throw new ProductNotFoundException("Requested product not found.");
+        }
     }
 
     @Override
